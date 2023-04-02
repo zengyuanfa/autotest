@@ -1,5 +1,6 @@
 import paramiko
 
+
 class LinuxConnection:
     def __init__(self, host, username, password):
         self.host = host
@@ -28,6 +29,8 @@ class LinuxConnection:
     def disconnect(self):
         if self.client:
             self.client.close()
+
+
 if __name__ == '__main__':
     host = 'host'
     username = 'root'
