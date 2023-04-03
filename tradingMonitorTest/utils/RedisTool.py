@@ -70,7 +70,7 @@ class RedisUtil:
         return pubsub
 
 if __name__ == "__main__":
-    redis = RedisUtil(host='host', password='Zyf#2021')
+    redis = RedisUtil(host='host', password='password')
     test_dict = {'buy': 5, 'sell': 25, 'net_buy': -20, 'total': 30}
     redis.set_dict('test_dict', test_dict)
     val = redis.get_dict('test_dict')
