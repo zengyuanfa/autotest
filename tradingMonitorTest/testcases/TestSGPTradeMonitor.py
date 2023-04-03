@@ -19,7 +19,7 @@ class TestSGPTradeMonitor(object):  # 测试用例类名必须用Test开头
         self.local_path = os.path.join(parent_path, 'download/').replace('\\', '/')
         self.linux_conn.download_dir(remote_path, self.local_path)
         # 创建redis连接
-        self.redis_conn = RedisUtil('host', 6379, 0, 'Zyf#2021')
+        self.redis_conn = RedisUtil('host', 6379, 0, 'password')
         # 更新redis中的数据
         sgp = SGPTradeRecord()
         sgp.set_redis_hk_order_count()
